@@ -10,7 +10,7 @@ require "open-uri"
 require 'faker'
 
 puts 'Clearing database'
-Booking.destroy_all
+# Booking.destroy_all
 Island.destroy_all
 User.destroy_all
 
@@ -60,8 +60,10 @@ cass_island_1 = Island.create!(
     longitude: rand(144.8600..145.0000),
     latitude: rand(-37.88020..-37.75650)
   )
-  file = URI.open("https://source.unsplash.com/featured/?island")
-  cass_island_1.photo.attach(io: file, filename: 'cass_island_1.png', content_type: 'image/png')
+  file1 = URI.open("https://source.unsplash.com/featured/?island")
+  file2 = URI.open("https://source.unsplash.com/featured/?island")
+  cass_island_1.photos.attach(io: file1, filename: 'cass_island_1_1.png', content_type: 'image/png')
+  cass_island_1.photos.attach(io: file2, filename: 'cass_island_1_2.png', content_type: 'image/png')
 cass_island_2 = Island.create!(
     user: cass,
     name: Faker::GreekPhilosophers.name,
@@ -70,5 +72,7 @@ cass_island_2 = Island.create!(
     longitude: rand(144.8600..145.0000),
     latitude: rand(-37.88020..-37.75650)
   )
-  file = URI.open("https://source.unsplash.com/featured/?island")
-  cass_island_2.photo.attach(io: file, filename: 'cass_island_2.png', content_type: 'image/png')
+  file3 = URI.open("https://source.unsplash.com/featured/?island")
+  file4 = URI.open("https://source.unsplash.com/featured/?island")
+  cass_island_2.photos.attach(io: file3, filename: 'cass_island_1_1.png', content_type: 'image/png')
+  cass_island_2.photos.attach(io: file4, filename: 'cass_island_1_2.png', content_type: 'image/png')
