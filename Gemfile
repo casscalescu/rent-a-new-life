@@ -27,6 +27,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'faker'
 gem 'omniauth-facebook'
+# Need this for Facebook login auth
+gem "omniauth-rails_csrf_protection"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
