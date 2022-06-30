@@ -1,0 +1,8 @@
+<h1>Browse Islands</h1>
+
+<% @islands.each do |island| %>
+  <p><%= island.name %></p>
+  <% island.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+<% end %>
