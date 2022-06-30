@@ -61,7 +61,7 @@ cass_island_1 = Island.create!(
     latitude: rand(-37.88020..-37.75650)
   )
   file1 = URI.open("https://source.unsplash.com/featured/?island")
-  file2 = URI.open("https://source.unsplash.com/featured/?island")
+  file2 = URI.open("https://source.unsplash.com/featured/?vacation?island")
   cass_island_1.photos.attach(io: file1, filename: 'cass_island_1_1.png', content_type: 'image/png')
   cass_island_1.photos.attach(io: file2, filename: 'cass_island_1_2.png', content_type: 'image/png')
 cass_island_2 = Island.create!(
@@ -73,7 +73,7 @@ cass_island_2 = Island.create!(
     latitude: rand(-37.88020..-37.75650)
   )
   file3 = URI.open("https://source.unsplash.com/featured/?island")
-  file4 = URI.open("https://source.unsplash.com/featured/?island")
+  file4 = URI.open("https://source.unsplash.com/featured/?vacation?island")
   cass_island_2.photos.attach(io: file3, filename: 'cass_island_2_1.png', content_type: 'image/png')
   cass_island_2.photos.attach(io: file4, filename: 'cass_island_2_2.png', content_type: 'image/png')
 cass_island_3 = Island.create!(
@@ -85,7 +85,7 @@ cass_island_3 = Island.create!(
     latitude: rand(-37.88020..-37.75650)
   )
   file5 = URI.open("https://source.unsplash.com/featured/?island")
-  file6 = URI.open("https://source.unsplash.com/featured/?island")
+  file6 = URI.open("https://source.unsplash.com/featured/?vacation?island")
   cass_island_3.photos.attach(io: file5, filename: 'cass_island_3_1.png', content_type: 'image/png')
   cass_island_3.photos.attach(io: file6, filename: 'cass_island_3_2.png', content_type: 'image/png')
 zara_island_1 = Island.create!(
@@ -97,7 +97,7 @@ zara_island_1 = Island.create!(
     latitude: rand(-37.88020..-37.75650)
   )
   file7 = URI.open("https://source.unsplash.com/featured/?island")
-  file8 = URI.open("https://source.unsplash.com/featured/?island")
+  file8 = URI.open("https://source.unsplash.com/featured/?vacation?island")
   zara_island_1.photos.attach(io: file7, filename: 'zara_island_1_1.png', content_type: 'image/png')
   zara_island_1.photos.attach(io: file8, filename: 'zara_island_1_2.png', content_type: 'image/png')
 zara_island_2 = Island.create!(
@@ -109,6 +109,6 @@ zara_island_2 = Island.create!(
     latitude: rand(-37.88020..-37.75650)
   )
   file9 = URI.open("https://source.unsplash.com/featured/?island")
-  file10 = URI.open("https://source.unsplash.com/featured/?island")
+  file10 = URI.open("https://source.unsplash.com/featured/?vacation?island")
   zara_island_2.photos.attach(io: file9, filename: 'zara_island_2_1.png', content_type: 'image/png')
   zara_island_2.photos.attach(io: file10, filename: 'zara_island_2_2.png', content_type: 'image/png')
