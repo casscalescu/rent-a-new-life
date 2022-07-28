@@ -1,0 +1,29 @@
+<div class="modal fade" id="islandEditModal" tabindex="-1" aria-labelledby="islandEditModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="islandEditModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @island do |f| %>
+          <%= f.input :name,
+                      input_html: { class: "form__input"},
+                      label_html: { class: "form__label"} %>
+          <%= f.input :price_per_night, label: "Price per Day",
+                      input_html: { class: "form__input"},
+                      label_html: { class: "form__label"} %>
+          <%= f.input :description, label: "Please enter a detailed description about your item, including its condition",
+                      input_html: { class: "form__input"},
+                      label_html: { class: "form__label"} %>
+          <%= f.input :location, label: "Pick up location",
+                      input_html: { class: "form__input"},
+                      label_html: { class: "form__label"} %>
+          <%= f.input :photo, as: :file,
+                      label_html: { class: "form__label"} %>
+          <%= f.button :submit , class: "btn btn-primary w-100" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,23 @@
-<h1>Islands#show</h1>
-<p>Find me in app/views/islands/show.html.erb</p>
+<%= link_to "< Back", :back, class: "link" %>
+
+<h1><%= @island.name %></h1>
+<p><%= @island.description %></p>
+<p>$<%= @island.price_per_night %> per day</p>
+<p><%= @island.location %></p>
+
+<!-- Images -->
+<% @island.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
+<!-- Edit & delete -->
+<div>
+  <% if current_user == @island.user %>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#islandEditModal">
+      Edit listing
+    </button>
+    <%= link_to "Delete", island_path(@island), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<%= render 'edit' %>
