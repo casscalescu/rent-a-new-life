@@ -36,6 +36,14 @@ class IslandsController < ApplicationController
   end
 
   def destroy
+    # if @surfboard.bookings.count.zero?
+    #   @surfboard.destroy
+    #   @message = 'Your surfboard has been deleted.'
+    # else
+    #   @message = 'You can not delete this surfboard because it has been booked.'
+    # end
+    @island.destroy
+    redirect_to islands_path
   end
 
   private
