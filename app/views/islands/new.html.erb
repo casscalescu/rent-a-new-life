@@ -1,2 +1,26 @@
-<h1>Islands#new</h1>
-<p>Find me in app/views/islands/new.html.erb</p>
+<h1>Create a new listing</h1>
+
+<%= simple_form_for @island do |f| %>
+  <%= f.input :name,
+              input_html: { class: "form__input"},
+              label_html: { class: "form__label"} %>
+  <%= f.input :category, as: :radio_buttons, collection: @island.category,
+              input_html: { class: "form__input"},
+              label_html: { class: "form__label"} %>
+  <%= f.input :price_per_night, label: "Price per day",
+              input_html: { class: "form__input"},
+              label_html: { class: "form__label"} %>
+  <%= f.input :deposit,
+              input_html: { class: "form__input"},
+              label_html: { class: "form__label"} %>
+  <%= f.input :description, label: "Please enter a detailed description about your island",
+              input_html: { class: "form__input"},
+              label_html: { class: "form__label"} %>
+    <%= f.input :location, label: "What is the islands' location",
+                input_html: { class: "form__input"},
+                label_html: { class: "form__label"}%>
+  <%= f.input :photos, as: :file,
+              input_html: { multiple: true },
+              label_html: { class: "form__label"} %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
